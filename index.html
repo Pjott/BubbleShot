@@ -4,6 +4,21 @@
     <meta charset="utf-8">
     <title>Bubble Shooter</title>
     <link href="_css/main.css" rel="stylesheet">
+    <script src="_js/modernizr.js"></script>
+    <script src="_js/yepnope.js"></script>
+    //script-loading functionality
+    <script>
+    yepnope([{
+      load: "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js",
+      complete: function() {
+        if(!window.jQuery) {
+          yepnope("_js/jquery-3.1.1.min.js");
+        }
+      }
+    }, {
+    load: "_js/game.js"
+  }]);
+    </script>
   </head>
   <body>
     //area of the game
